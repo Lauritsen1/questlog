@@ -1,11 +1,13 @@
-import { Button } from '@/components/ui/button'
-import { ModeToggle } from '@/components/mode-toggle'
+import { GameCover } from '@/components/game-cover'
 
 export default function Home() {
   return (
-    <div>
-      <ModeToggle />
-      <Button>Click me</Button>
+    <div className="flex h-screen items-center justify-center gap-4">
+      <GameCover />
+      <GameCover />
+      <GameCover />
+      <GameCover />
+      <GameCover />
     </div>
   )
 }
