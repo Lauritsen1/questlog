@@ -14,9 +14,6 @@ export function GameCover() {
             alt="Game Cover"
           />
         </AspectRatio>
-        <div className="mt-2 flex justify-center">
-          <span className="text-sm font-semibold">Baldurs Gate 3</span>
-        </div>
       </Link>
     </div>
   )
