@@ -5,7 +5,7 @@ import { AspectRatio } from '@/components/ui/aspect-ratio'
 
 export function GameCover() {
   return (
-    <div className="w-[175px] transition duration-300 ease-out hover:scale-105">
+    <div className="transition duration-300 ease-out hover:scale-105">
       <Link href="#" className="block">
         <AspectRatio ratio={3 / 4}>
           <Image
