@@ -2,6 +2,7 @@
   "singleQuote": true,
   "semi": false,
   "tabWidth": 2,
+  "quoteProps": "preserve",
   "importOrder": [
     "^(react/(.*)$)|^(react$)",
     "^(next/(.*)$)|^(next$)",
