@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { AspectRatio } from '@/components/ui/aspect-ratio'
+import { Skeleton } from '@/components/ui/skeleton'
 
 type Game = {
   id: number
@@ -34,5 +35,13 @@ export function GameCover({ game }: { game: Game }) {
         </AspectRatio>
       </Link>
     </div>
+  )
+}
+
+export function GameCoverSkeleton() {
+  return (
+    <AspectRatio ratio={3 / 4}>
+      <Skeleton className="h-full w-full rounded" />
+    </AspectRatio>
   )
 }

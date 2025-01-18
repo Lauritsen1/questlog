@@ -12,7 +12,7 @@ const config = {
 export async function getGames() {
   const res = await fetch('https://api.igdb.com/v4/games', {
     ...config,
-    body: 'fields name, cover.url;',
+    body: 'fields name, cover.url; limit 36;',
   })
 
   if (!res.ok) {
