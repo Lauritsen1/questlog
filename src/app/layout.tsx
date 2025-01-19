@@ -1,10 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
-import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar'
-import { AppSidebar } from '@/components/app-sidebar'
-import { QueryProvider } from '@/components/providers/query-provider'
-import { ThemeProvider } from '@/components/providers/theme-provider'
+import { Providers } from '@/components/providers/providers'
 import { SiteHeader } from '@/components/site-header'
 
 import '@/styles/globals.css'
@@ -24,24 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <QueryProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <SidebarProvider defaultOpen={false}>
-              <AppSidebar />
-              <SidebarInset>
-                <main>
-                  <SiteHeader />
-                  {children}
-                </main>
-              </SidebarInset>
-            </SidebarProvider>
-          </ThemeProvider>
-        </QueryProvider>
+        <Providers>
+          <main>
+            <SiteHeader />
+            {children}
+          </main>
+        </Providers>
       </body>
     </html>
   )
